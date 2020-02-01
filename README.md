@@ -1,2 +1,2 @@
 # Curso-C-
-Curso de lenguaje C++ (Programación Orientada a Objetos)
+Curso de lenguaje C# (Programación Orientada a Objetos)
