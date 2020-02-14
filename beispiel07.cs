@@ -1,51 +1,37 @@
 using System;
-
+					
 public class Program
 {
+	// Declaración de un método que recibe argumentos y no retorna nada
+	public static void miMetodo(string nombre)
+	{
+		Console.WriteLine("El nombre es " + nombre);
+	}
+	
+	// Método con un valor de parámetros por defecto
+	public static void miMetodo2(string pais = "Suecia")
+	{
+		Console.WriteLine("Yo soy de " + pais);
+	}
+	
+	// Método que recibe un argumento y regresa un valor
+	static int miMetodo3(int x)
+	{
+		return 5 * x;
+	}
+	
 	public static void Main()
 	{
-		/*
-			Manejo de excepciones en C#
-			El manejo de expeciones permite controlar los errores de un programa
-			en tiempo de ejecución .
-			Generalmente, cuando un error ocurre (división entre 0, operar variables de tipos diferentes)
-			el programa normalmente se detiene y genera un mensaje de error.
-			El término técnico para esto es que el programa lanza una excepción (o arroja un error).
-			
-			Para esto se utiliza la instrucción try-catch
-			
-			try
-			{
-				// Bloque de código de intento
-			}
-			catch(Exception e) // Se coloca que tipo de excepción se va a manejar
-			{
-				// Bloque de código para manejar el error
-			}
-			finally
-			{
-				// Código a ejecutar tras el try - catch
-			}
-		*/
+		/* Llamada a los métodos definidos */
+		// Mandando argumento, no regresa nada
+		miMetodo("Bond, James Bond");
 		
-		int[] misNumeros = {1, 2, 3, 4};
+		// Recepción de argumentos
+		miMetodo2("Islandia");
+		miMetodo2();	// No se envía un parámetro, se activa el por defecto
 		
-		try
-		{
-			// Intentar  ingresar a un elemento fuera del tamaño del arreglo
-			Console.WriteLine(misNumeros[10]);
-			// Esto lanzará una excepción
-		}
-		catch (Exception e)
-		{
-			// Esto manda el mensaje de error del sistema
-			Console.WriteLine(e.Message);
-			// Aunque también se puede colocar un mensaje personalizado
-			Console.WriteLine("Algo ha ido mal al intentar ingresar al arreglo");
-		}
-		finally
-		{
-			Console.WriteLine("El try-catch ha finalizado");
-		}
+		// Recepción de argumentos y retorno de valor
+		int valor = miMetodo3(6);
+		Console.WriteLine("El resultado es: {0}", valor);
 	}
 }

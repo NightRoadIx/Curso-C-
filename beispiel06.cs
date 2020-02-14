@@ -1,37 +1,50 @@
 using System;
-					
-public class Program
+
+namespace pruebas
 {
-	// Declaración de un método que recibe argumentos y no retorna nada
-	public static void miMetodo(string nombre)
+	class Program
 	{
-		Console.WriteLine("El nombre es " + nombre);
-	}
-	
-	// Método con un valor de parámetros por defecto
-	public static void miMetodo2(string pais = "Suecia")
-	{
-		Console.WriteLine("Yo soy de " + pais);
-	}
-	
-	// Método que recibe un argumento y regresa un valor
-	static int miMetodo3(int x)
-	{
-		return 5 * x;
-	}
-	
-	public static void Main()
-	{
-		/* Llamada a los métodos definidos */
-		// Mandando argumento, no regresa nada
-		miMetodo("Bond, James Bond");
-		
-		// Recepción de argumentos
-		miMetodo2("Islandia");
-		miMetodo2();	// No se envía un parámetro, se activa el por defecto
-		
-		// Recepción de argumentos y retorno de valor
-		int valor = miMetodo3(6);
-		Console.WriteLine("El resultado es: {0}", valor);
+		public static void Main(string[] args)
+		{
+			
+			// Genear un vector con valores ya definidos
+			int[] misNumeros = {0,1,2,3,4,5,6,7,8,9};
+			// Generar un vector con cierta cantidad de espacios disponibles
+			// se debe usar la palabra new y el tipo de dato, de la forma:
+			// int[] nombre = new int[TAMAÑO];
+			
+			// Sin embargo es posible usar asiganción dinámica de espacios
+			Console.Write("Ingresar tamaño del vector: ");
+			int k = Convert.ToInt32(Console.ReadLine());
+			int[] vector = new int[k];
+			
+			// Así ya se pueden ingresar valores en el vector generado
+			// la propiedad .Length del vector proporciona el número
+			// total de elementos en el arreglo
+			for(k = 0; k < vector.Length, k++)
+			{
+				Console.Write("Elemento {0}: ", k);
+				vector[k] = Convert.ToInt32(Console.ReadLine());
+			}
+			
+			// Recorrer el vector para mostrarlo
+			foreach (int tmp in vector)
+				Console.Write(" {0} ", tmp);
+			
+			// Matrices regulares
+			// Se declaran, colocando una coma por cada dimensión
+			int[,] matriz = new int[3,3];
+			
+			/* PROPIEADES DE LOS VECTORES */
+			// Tamaño de los vectores
+			Console.WriteLine( misNumeros.Length );
+			// o de las matrices, ambos proporcionan el número de elementos
+			Console.WriteLine( matriz.Length );
+			
+			// Número de dimensiones de la matriz
+			Console.WriteLine( matriz.Rank );
+			
+			Console.ReadKey(true);
+		}
 	}
 }
