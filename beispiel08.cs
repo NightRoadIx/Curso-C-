@@ -52,6 +52,12 @@ namespace etereal
 			Console.ReadKey(true);
 			// Dar un reset al color de fondo y de letra
 			Console.ResetColor();
+			// Generar un pitido
+			Console.Beep();
+			// El pitido se puede controlar en frecuencia y duración del sonido (milisegundos)
+			// Console.Beep(frecuencia, duracion);
+			Console.Beep(440, 100);
+			
 			Console.ReadKey(true);
 			
 		}
