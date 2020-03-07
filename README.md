@@ -13,3 +13,7 @@ beispiel08.cs   -   Programa que muestra el uso de excepciones
 beispiel09.cs   -   Programa que muestra el uso de algunas funcionalidades de la consola  
 beispiel10.cs   -   Programa ejemplo de programación orientada a objetos 1  
 beispiel11.cs   -   Programa ejemplo de programación orientada a objetos 2  
+beispiel12.cs   -   Programa que muestra algunos de los métodos de la clase String  
+beispiel13.cs   -   Programa que muestra algunos de los métodos de la clase Math y Random  
+beispiel14.cs   -   Programa que muestra algunos de los métodos de la clase File  
+beispiel15.cs   -   Programa que muestra algunos de los métodos de la clase DateTime  
