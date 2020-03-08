@@ -17,3 +17,4 @@ beispiel12.cs   -   Programa que muestra algunos de los métodos de la clase Str
 beispiel13.cs   -   Programa que muestra algunos de los métodos de la clase Math y Random  
 beispiel14.cs   -   Programa que muestra algunos de los métodos de la clase File  
 beispiel15.cs   -   Programa que muestra algunos de los métodos de la clase DateTime  
+beispiel16.cs   -   Programa que muestra algunos de los métodos de la clase Char  
