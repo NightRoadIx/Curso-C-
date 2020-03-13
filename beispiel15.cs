@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace fechizacion
 {
@@ -32,6 +33,12 @@ namespace fechizacion
 			Console.WriteLine(fecha.Second);
 			// Milisegundos
 			Console.WriteLine(fecha.Millisecond);
+			
+			// Mostrar la fecha con un formato específico en algún idioma específico
+			// Crear a partir de la clase CultureInfo, una "cultura" en específico
+			// esto se refiere a la forma de colocar la fecha y nombrar meses y días de la semana
+			CultureInfo cult = CultureInfo.CreateSpecificCulture("la-001");
+			Console.WriteLine(fecha.ToString("D", cult));
 			
 			// Métodos
 			// Método Compare, compara dos fechas de la siguiente forma:

@@ -2,7 +2,7 @@ using System;
 // Se requiere usar esta librería para manejar archivos
 using System.IO;
 
-namespace archivosos
+namespace cadenosos
 {
 	class Program
 	{
