@@ -20,3 +20,5 @@ beispiel15.cs   -   Programa que muestra algunos de los métodos de la clase Dat
 beispiel16.cs   -   Programa que muestra algunos de los métodos de la clase Char  
 beispiel17.cs   -   Programa que muestra algunos de los métodos de la clase Globalization  
 beispiel18.cs   -   Programa ejemplo de programación orientada a objetos (Herencia)  
+
+ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
