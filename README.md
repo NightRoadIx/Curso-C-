@@ -19,3 +19,4 @@ beispiel14.cs   -   Programa que muestra algunos de los métodos de la clase Fil
 beispiel15.cs   -   Programa que muestra algunos de los métodos de la clase DateTime  
 beispiel16.cs   -   Programa que muestra algunos de los métodos de la clase Char  
 beispiel17.cs   -   Programa que muestra algunos de los métodos de la clase Globalization  
+beispiel18.cs   -   Programa ejemplo de programación orientada a objetos (Herencia)  
