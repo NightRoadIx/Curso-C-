@@ -22,5 +22,6 @@ beispiel17.cs   -   Programa que muestra algunos de los métodos de la clase Glo
 beispiel18.cs   -   Programa ejemplo de programación orientada a objetos (Herencia)  
 beispiel19.cs   -   Programa ejemplo de programación orientada a objetos (Herencia, clase base)  
 beispiel20.cs   -   Programa ejemplo de programación orientada a objetos (Herencia, métodos virtuales y override)  
+beispiel21.cs   -   Programa ejemplo de programación orientada a objetos (Espacios de nombres)  
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
