@@ -25,5 +25,6 @@ beispiel19.cs   -   Programa ejemplo de programación orientada a objetos (Heren
 beispiel20.cs   -   Programa ejemplo de programación orientada a objetos (Herencia, métodos virtuales y override) [Incluye diagrama de clase]  
 beispiel21.cs   -   Programa ejemplo de programación orientada a objetos (Espacios de nombres)  
 beispiel22.cs   -   Programa ejemplo del uso de métodos con parámetros no definidos  
+beispiel23.cs   -   Programa ejemplo muy completo del uso de la Programación Orientada a Objetos en C#  
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
