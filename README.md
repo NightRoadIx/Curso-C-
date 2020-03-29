@@ -26,5 +26,7 @@ beispiel20.cs   -   Programa ejemplo de programación orientada a objetos (Heren
 beispiel21.cs   -   Programa ejemplo de programación orientada a objetos (Espacios de nombres)  
 beispiel22.cs   -   Programa ejemplo del uso de métodos con parámetros no definidos  
 beispiel23.cs   -   Programa ejemplo muy completo del uso de la Programación Orientada a Objetos en C#  
+beispiel24.cs   -   Programa ejemplo con enumeraciones y variables implícitas  
+beispiel25.cs   -   Programa ejemplo con la modificación de atributos encapsulados usando get - set  
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
