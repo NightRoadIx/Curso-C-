@@ -28,5 +28,6 @@ beispiel22.cs   -   Programa ejemplo del uso de métodos con parámetros no defi
 beispiel23.cs   -   Programa ejemplo muy completo del uso de la Programación Orientada a Objetos en C#  
 beispiel24.cs   -   Programa ejemplo con enumeraciones y variables implícitas  
 beispiel25.cs   -   Programa ejemplo con la modificación de atributos encapsulados usando get - set  
+beispiel26.cs   -   Programa ejemplo con el uso de objetos Collection, Listas  
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
