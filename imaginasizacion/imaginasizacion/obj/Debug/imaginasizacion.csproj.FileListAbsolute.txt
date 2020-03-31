@@ -1,0 +1,7 @@
+E:\SharpDevelop\imaginasizacion\imaginasizacion\bin\Debug\imaginasizacion.exe
+E:\SharpDevelop\imaginasizacion\imaginasizacion\bin\Debug\imaginasizacion.pdb
+E:\SharpDevelop\imaginasizacion\imaginasizacion\obj\Debug\imaginasizacion.csprojResolveAssemblyReference.cache
+E:\SharpDevelop\imaginasizacion\imaginasizacion\obj\Debug\imaginasizacion.MainForm.resources
+E:\SharpDevelop\imaginasizacion\imaginasizacion\obj\Debug\imaginasizacion.csproj.GenerateResource.Cache
+E:\SharpDevelop\imaginasizacion\imaginasizacion\obj\Debug\imaginasizacion.exe
+E:\SharpDevelop\imaginasizacion\imaginasizacion\obj\Debug\imaginasizacion.pdb
