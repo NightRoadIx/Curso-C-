@@ -32,3 +32,4 @@ beispiel26.cs   -   Programa ejemplo con el uso de objetos Collection, Listas
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
 imaginasizacion -   Carpeta con proyecto que incluye la segunda parte básica del uso de la GUI en C#  
+recibición      -   Carpeta con proyecto que incluye la tercera parte básica del uso de la GUI en C#  
