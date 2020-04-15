@@ -29,7 +29,9 @@ beispiel23.cs   -   Programa ejemplo muy completo del uso de la Programación Or
 beispiel24.cs   -   Programa ejemplo con enumeraciones y variables implícitas  
 beispiel25.cs   -   Programa ejemplo con la modificación de atributos encapsulados usando get - set  
 beispiel26.cs   -   Programa ejemplo con el uso de objetos Collection, Listas  
+beispiel27.cs   -   Programa ejemplo del uso de multiprocesamiento (multithreading)  
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
 imaginasizacion -   Carpeta con proyecto que incluye la segunda parte básica del uso de la GUI en C#  
 recibición      -   Carpeta con proyecto que incluye la tercera parte básica del uso de la GUI en C#  
+chirsCornell    -   Carpeta con proyecto que incluye la cuarta parte del uso de la GUI en C#
