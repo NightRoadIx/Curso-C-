@@ -31,6 +31,7 @@ beispiel25.cs   -   Programa ejemplo con la modificación de atributos encapsula
 beispiel26.cs   -   Programa ejemplo con el uso de objetos Collection, Listas  
 beispiel27.cs   -   Programa ejemplo del uso de multiprocesamiento (multithreading)  
 beispiel28.cs   -   Programa ejemplo con el uso de objetos Collection, Dictionary  
+beispiel29.cs   -   Programa ejemplo con el uso de Interfaces  
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
 imaginasizacion -   Carpeta con proyecto que incluye la segunda parte básica del uso de la GUI en C#  
