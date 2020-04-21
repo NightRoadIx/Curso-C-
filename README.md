@@ -32,6 +32,7 @@ beispiel26.cs   -   Programa ejemplo con el uso de objetos Collection, Listas
 beispiel27.cs   -   Programa ejemplo del uso de multiprocesamiento (multithreading)  
 beispiel28.cs   -   Programa ejemplo con el uso de objetos Collection, Dictionary  
 beispiel29.cs   -   Programa ejemplo con el uso de Interfaces  
+beispiel30.cs   -   Programa con funciones que ejemplifican la complejidad computacional  
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
 imaginasizacion -   Carpeta con proyecto que incluye la segunda parte básica del uso de la GUI en C#  
