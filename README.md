@@ -34,6 +34,7 @@ beispiel28.cs   -   Programa ejemplo con el uso de objetos Collection, Dictionar
 beispiel29.cs   -   Programa ejemplo con el uso de Interfaces  
 beispiel30.cs   -   Programa con funciones que ejemplifican la complejidad computacional  
 beispiel31.cs   -   Programa ejemplo del uso de multiprocesamiento (multithreading), programación asíncrona  
+beispiel32.cs   -   Programa ejemplo para lectura de archivos CSV ya sea de forma local o remota  
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
 imaginasizacion -   Carpeta con proyecto que incluye la segunda parte básica del uso de la GUI en C#  
