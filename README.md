@@ -36,6 +36,7 @@ beispiel30.cs   -   Programa con funciones que ejemplifican la complejidad compu
 beispiel31.cs   -   Programa ejemplo del uso de multiprocesamiento (multithreading), programación asíncrona  
 beispiel32.cs   -   Programa ejemplo para lectura de archivos CSV ya sea de forma local o remota  
 beispiel33.cs   -   Programa ejemplo para el manejo de una Base de Datos No-SQL (Firebase)                
+beispiel33.cs   -   Programa ejemplo para el manejo de la librería System.Security.Cryptography, para el cifrado de textos    
 
 ventanización   -   Carpeta con proyecto que incluye la parte básica del uso de la GUI en C#  
 imaginasizacion -   Carpeta con proyecto que incluye la segunda parte básica del uso de la GUI en C#  
