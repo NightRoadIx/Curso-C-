@@ -34,7 +34,7 @@ namespace Cifratogrfa
 			MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
 			// Con el objeto creado, calcular el valor de la función Hash
 			/*
-			 * Una función hasj o función digest es una función que mediante un algoritmo que permite convertir
+			 * Una función hash o función digest es una función que mediante un algoritmo que permite convertir
 			 * un conjunto de elementos (en general cadenas de texto de cualquier longitud) a un rango de salida finito
 			 * el cual normalmente es una cadena de texto de longitud fija (8, 16, 32 caracteres).
 			 * La idea básica es que la función hash sirva como una representación compacta de la cadena de entrada
