@@ -1,3 +1,11 @@
+/*
+ * Primer programa en C#
+ * Generado por mi
+ * El día de hoy
+ * Modificado el día de mañana
+ * 
+ * El programa solo mostrará lo inicial del lenguaje C#
+ * */
 // Esto sustituye al #include <> en C
 // Permite usar atributos y métodos del sistema
 using System;
@@ -60,7 +68,15 @@ public class Program
 		*/
 		int edad = Convert.ToInt32(Console.ReadLine());
 		Console.WriteLine("Edad: " + edad);
+		Console.Write("Press any key to continue . . . "); // printf();
 		
-		
+		// TODO: Finalizar el programa
+			
+		// HACK: Hackear del programa
+			
+		// UNDONE: Eliminar o quitar del programa
+			
+		// FIXME: Es para arreglar los errores "BUGS"
+		Console.ReadKey(true);    // getch();
 	}
 }
