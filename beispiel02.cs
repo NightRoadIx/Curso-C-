@@ -1,3 +1,7 @@
+/*
+ * Uso del bloque de CONTROL
+ * Sentencias condicionales if - else if - else y ternaria
+ * */
 using System;
 					
 public class Program
