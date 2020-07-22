@@ -6,7 +6,7 @@ public class Program
 	{
 		/*
 			Manejo de excepciones en C#
-			El manejo de expeciones permite controlar los errores de un programa
+			El manejo de excepciones permite controlar los errores de un programa
 			en tiempo de ejecución .
 			Generalmente, cuando un error ocurre (división entre 0, operar variables de tipos diferentes)
 			el programa normalmente se detiene y genera un mensaje de error.
@@ -47,5 +47,7 @@ public class Program
 		{
 			Console.WriteLine("El try-catch ha finalizado");
 		}
+		
+		// TODO: Agregar lista de excepciones de página web de .NET
 	}
 }
