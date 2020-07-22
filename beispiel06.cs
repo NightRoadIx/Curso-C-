@@ -35,7 +35,7 @@ namespace pruebas
 			// Se declaran, colocando una coma por cada dimensión
 			int[,] matriz = new int[3,3];
 			
-			/* PROPIEADES DE LOS VECTORES */
+			/* PROPIEDADES DE LOS VECTORES */
 			// Tamaño de los vectores
 			Console.WriteLine( misNumeros.Length );
 			// o de las matrices, ambos proporcionan el número de elementos
