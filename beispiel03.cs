@@ -1,9 +1,16 @@
+/*
+ * Sentencia swtich
+ * Toma de decisiones
+ * Va a recibir un valor ya sea un caracter
+* o un valor entero
+* */ 
 using System;
 					
 public class Program
 {
 	public static void Main()
 	{
+		// Variable que indica el día de la semana
 		int diaSemana;
 		
 		Console.WriteLine("Ingrese el día de la semana [1, 7]");
@@ -22,7 +29,7 @@ public class Program
 			case 2:		// if(diaSemana == 2)
 				Console.WriteLine("Hoy es Martes");
 				break;
-			case 3:
+			case 3:		// if(diaSemana == 3)
 				Console.WriteLine("Hoy es Miércoles");
 				break;
 			case 4:
