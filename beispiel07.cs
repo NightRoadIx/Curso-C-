@@ -1,3 +1,7 @@
+/*
+ * 	Programa ejemplo de métodos o funciones
+ * y = f(x) = expresión
+ * */
 using System;
 					
 public class Program
@@ -31,7 +35,9 @@ public class Program
 		miMetodo2();	// No se envía un parámetro, se activa el por defecto
 		
 		// Recepción de argumentos y retorno de valor
-		int valor = miMetodo3(6);
+		int valor = miMetodo3(6); // y = f(x)
 		Console.WriteLine("El resultado es: {0}", valor);
+		
+		Console.ReadKey();
 	}
 }
