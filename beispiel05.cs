@@ -1,3 +1,7 @@
+/*
+ * Ciclos para el bloquer de control
+ * ciclo for 
+ * */
 using System;
 					
 public class Program
@@ -6,9 +10,17 @@ public class Program
 	{
 		int i;
 		
+		/*
+		 * while(true) 
+		 * {
+		 * 		if(condición)
+		 * 			break;
+		 * }
+		 * */
+		
 		// Ciclo for, utilizado para hacer ciclos cuyo número esta bien definido
 		// la ejecución es la siguiente:
-		// for(inicio_de_variables; condición; operaciones)
+		// for(inicio_de_variables, inicio_var01; condición; operaciones, operación01, operación02)
 		// {
 		//		Cuerpo del for
 		// }
@@ -31,7 +43,7 @@ public class Program
 		Console.WriteLine("El valor es {0}", total);
 		
 		
-		// Seentencia foreach
+		// Sentencia foreach
 		// Es una sentencia de ciclo adicional a las existentes en C-ANSI
 		// la cual es utilizada para recorrer un arreglo
 		// Su uso es foreach(tipo nombreVariable in nombreArreglo)
@@ -39,5 +51,6 @@ public class Program
 		foreach(string c in frutas)
 			Console.WriteLine(c);
 		
+		Console.ReadKey();
 	}
 }
