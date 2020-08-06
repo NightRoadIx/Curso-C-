@@ -16,8 +16,8 @@ namespace programa
 		 */ 
 		enum planeten
 		{
-			Mercurio,
-			Venus,
+			Mercurio,	// 0
+			Venus,		// 1
 			Tierra,
 			Marte,
 			Júpiter,
@@ -35,7 +35,7 @@ namespace programa
 			 * Solo debe usarse como variable local
 			 * No debe utilizarse ni como parámetro ni como valor de retorno en los métodos
 			 */
-			var imp = 15;
+			var imp = 2.3;
 			Console.WriteLine("La variable {0}", imp);
 			Console.WriteLine("El tipo de variable es {0}", imp.GetType() );
 			
@@ -48,6 +48,20 @@ namespace programa
 			// parámetro el tipo de la enumeración que se desea observar
 			foreach(string k in Enum.GetNames(typeof(planeten)))
 				Console.Write(k + " ");
+			
+			// switch con enumeraciones
+			Console.WriteLine("");
+			// Se puede hacer un cast directo con el nuevo tipo de datos generado
+			planeten miPlaneta = (planeten)2;
+			switch(miPlaneta)
+			{
+				case planeten.Mercurio:
+					Console.WriteLine("No es mi planeta");
+					break;
+				case planeten.Tierra:
+					Console.WriteLine("Es mi planeta el tercero");
+					break;
+			}
 			
 			Console.ReadKey();
 		}
