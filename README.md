@@ -42,5 +42,6 @@ ventanización   -   Carpeta con proyecto que incluye la parte básica del uso d
 imaginasizacion -   Carpeta con proyecto que incluye la segunda parte básica del uso de la GUI en C#  
 recibición      -   Carpeta con proyecto que incluye la tercera parte básica del uso de la GUI en C#  
 chirsCornell    -   Carpeta con proyecto que incluye la cuarta parte del uso de la GUI en C#  
+usoChart        -   Carpeta con proyecto que incluye el uso del control Chart para graficar en una GUI en C#
   
 poblacionizacion-   Carpeta con proecto que muestr la forma de conjuntar el análisis de un archivo CSV en una GUI (ciencia de datos)
