@@ -69,22 +69,42 @@ namespace complejos
 			
 			return aux;
 		}
+		// Resta (a, b) - (c, d) = (a-c, b-d)
+		public NumComplejos restarComplejo(NumComplejos c)
+		{
+			NumComplejos aux = new NumComplejos();
+			aux.real = this.real - c.real;
+			aux.imag = this.imag - c.imag;
+			
+			return aux;
+		}
+		// Multiplica (a, b) * (c, d) = (ac - bd, ad + bc)
+		public NumComplejos multiplicarComplejo(NumComplejos c)
+		{
+			NumComplejos aux = new NumComplejos();
+			aux.real = this.real * c.real - this.imag * c.imag;
+			aux.imag = this.real * c.imag - this.imag * c.real;
+						
+			return aux;
+		}
 		
-		// TODO: Generar las otras operaciones de resta, multiplicación y división
+		// TODO: Generar la división
 	}
 	
 	public class Program
 	{
 		public static void Main(string[] args)
-		{			
+		{
+			Console.Title = "Programacización orientada a objetivización";
+			
 			// Instanciar un objeto complejo1 del tipo NumComplejos
 			NumComplejos complejo1 = new NumComplejos(1, 2); // 1 + 2i
 			NumComplejos complejo2 = new NumComplejos(3, 4); // 3 + 4i			
 			NumComplejos complejo3 = new NumComplejos(); // 0 + 0i
-						
+			
 			complejo1.mostrarComplejos();
 			complejo2.mostrarComplejos();
-			complejo3.mostrarComplejos();
+			complejo3.mostrarComplejos();			
 			
 			complejo1.setReal(6.0);
 			complejo1.mostrarComplejos();
@@ -93,6 +113,13 @@ namespace complejos
 			
 			complejo3 = complejo1.sumarComplejo(complejo2);
 			Console.Write("Suma: "); complejo3.mostrarComplejos();
+			
+			// Instanciar el objeto
+			NumComplejos complejo4 = new NumComplejos();
+			Console.Write("Escriba un número complejo: ");
+			// TODO: Leer el complejo en una sola línea????
+			// Lectura de una cadena del tipo A+-Bi
+			Console.ReadLine();
 			
 			Console.Write("Presione una tecla para continuar si fuése usted tan amable . . . ");
 			Console.ReadKey(true);
