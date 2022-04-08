@@ -1,0 +1,7 @@
+C:\Users\s_bio\Documents\SharpDevelop Projects\ElRFCFinal\ElRFCFinal\obj\Debug\ElRFCFinal.csprojResolveAssemblyReference.cache
+C:\Users\s_bio\Documents\SharpDevelop Projects\ElRFCFinal\ElRFCFinal\obj\Debug\ElRFCFinal.MainForm.resources
+C:\Users\s_bio\Documents\SharpDevelop Projects\ElRFCFinal\ElRFCFinal\obj\Debug\ElRFCFinal.csproj.GenerateResource.Cache
+C:\Users\s_bio\Documents\SharpDevelop Projects\ElRFCFinal\ElRFCFinal\bin\Debug\ElRFCFinal.exe
+C:\Users\s_bio\Documents\SharpDevelop Projects\ElRFCFinal\ElRFCFinal\bin\Debug\ElRFCFinal.pdb
+C:\Users\s_bio\Documents\SharpDevelop Projects\ElRFCFinal\ElRFCFinal\obj\Debug\ElRFCFinal.exe
+C:\Users\s_bio\Documents\SharpDevelop Projects\ElRFCFinal\ElRFCFinal\obj\Debug\ElRFCFinal.pdb
