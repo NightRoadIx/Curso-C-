@@ -1,0 +1,7 @@
+C:\Users\s_bio\Documents\SharpDevelop Projects\CURPGUI\CURPGUI\bin\Debug\CURPGUI.exe
+C:\Users\s_bio\Documents\SharpDevelop Projects\CURPGUI\CURPGUI\bin\Debug\CURPGUI.pdb
+C:\Users\s_bio\Documents\SharpDevelop Projects\CURPGUI\CURPGUI\obj\Debug\CURPGUI.csprojResolveAssemblyReference.cache
+C:\Users\s_bio\Documents\SharpDevelop Projects\CURPGUI\CURPGUI\obj\Debug\CURPGUI.MainForm.resources
+C:\Users\s_bio\Documents\SharpDevelop Projects\CURPGUI\CURPGUI\obj\Debug\CURPGUI.csproj.GenerateResource.Cache
+C:\Users\s_bio\Documents\SharpDevelop Projects\CURPGUI\CURPGUI\obj\Debug\CURPGUI.exe
+C:\Users\s_bio\Documents\SharpDevelop Projects\CURPGUI\CURPGUI\obj\Debug\CURPGUI.pdb
