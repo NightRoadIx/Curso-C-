@@ -1,0 +1,10 @@
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\bin\Debug\TiroParabolico.exe.config
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\bin\Debug\TiroParabolico.exe
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\bin\Debug\TiroParabolico.pdb
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\obj\Debug\TiroParabolico.csprojAssemblyReference.cache
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\obj\Debug\TiroParabolico.Form1.resources
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\obj\Debug\TiroParabolico.Properties.Resources.resources
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\obj\Debug\TiroParabolico.csproj.GenerateResource.cache
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\obj\Debug\TiroParabolico.csproj.CoreCompileInputs.cache
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\obj\Debug\TiroParabolico.exe
+C:\Users\s_bio\source\repos\TiroParabolico\TiroParabolico\obj\Debug\TiroParabolico.pdb
