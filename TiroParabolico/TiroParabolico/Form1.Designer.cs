@@ -29,6 +29,9 @@ namespace TiroParabolico
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.caja1 = new System.Windows.Forms.TextBox();
@@ -50,7 +53,14 @@ namespace TiroParabolico
             this.caja5 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label14 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,6 +79,7 @@ namespace TiroParabolico
             this.caja1.Name = "caja1";
             this.caja1.Size = new System.Drawing.Size(185, 22);
             this.caja1.TabIndex = 1;
+            this.caja1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.caja1_KeyPress);
             // 
             // label2
             // 
@@ -94,6 +105,7 @@ namespace TiroParabolico
             this.caja2.Name = "caja2";
             this.caja2.Size = new System.Drawing.Size(185, 22);
             this.caja2.TabIndex = 4;
+            this.caja2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.caja2_KeyPress);
             // 
             // label4
             // 
@@ -192,63 +204,140 @@ namespace TiroParabolico
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(328, 329);
+            this.button1.Location = new System.Drawing.Point(311, 201);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 23);
             this.button1.TabIndex = 15;
             this.button1.Text = "Salvar local";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 332);
+            this.label12.Location = new System.Drawing.Point(12, 204);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 17);
             this.label12.TabIndex = 16;
             this.label12.Text = "Archivo:";
+            this.label12.Visible = false;
             // 
             // caja5
             // 
-            this.caja5.Location = new System.Drawing.Point(114, 329);
+            this.caja5.Location = new System.Drawing.Point(114, 201);
             this.caja5.Name = "caja5";
             this.caja5.Size = new System.Drawing.Size(185, 22);
             this.caja5.TabIndex = 17;
+            this.caja5.Visible = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(328, 368);
+            this.button2.Location = new System.Drawing.Point(311, 240);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 23);
             this.button2.TabIndex = 18;
             this.button2.Text = "Salvar BD";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(568, 329);
+            this.button3.Location = new System.Drawing.Point(15, 332);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(233, 62);
+            this.button3.Size = new System.Drawing.Size(414, 65);
             this.button3.TabIndex = 19;
             this.button3.Text = "Calcular";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox6
+            // chart1
             // 
-            this.textBox6.Location = new System.Drawing.Point(514, 12);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(341, 287);
-            this.textBox6.TabIndex = 20;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(451, 12);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(436, 385);
+            this.chart1.TabIndex = 21;
+            this.chart1.Text = "chart1";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(311, 279);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(118, 23);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Salvar img";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(114, 280);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(185, 22);
+            this.textBox1.TabIndex = 24;
+            this.textBox1.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 283);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 17);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Imagen:";
+            this.label11.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(791, 417);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(108, 17);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "No conectado";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(15, 408);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(414, 23);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 26;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(435, 414);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(48, 17);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "0.00%";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 419);
-            this.Controls.Add(this.textBox6);
+            this.ClientSize = new System.Drawing.Size(899, 443);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.caja5);
@@ -276,7 +365,9 @@ namespace TiroParabolico
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tiro Parabólico";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,7 +395,13 @@ namespace TiroParabolico
         private System.Windows.Forms.TextBox caja5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label14;
     }
 }
 

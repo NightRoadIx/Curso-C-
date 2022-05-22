@@ -1,6 +1,3 @@
-dt	x	y
-dt	x	y
-dt	x	y
 dt 	 x 	 y 
 
 0	0	2300
