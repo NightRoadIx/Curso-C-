@@ -1,5 +1,5 @@
 /*
- ObtenciÛn del factorial de un n˙mero
+ Obtenci√≥n del factorial de un n√∫mero
 */
 using System;
 					
@@ -7,23 +7,38 @@ public class Program
 {
 	public static void Main()
 	{
+		/*
+			Programa para calcular el factorial de un n√∫mero
+			El factorial de un n√∫mero est√° definido como:
+			n! = n*(n-1)*(n-2)*...*1
+
+			Definiendo 0! = 1
+		*/
 		// Variables a utilizar
-		// num 	 -	n˙mero a obtener faxtorial [int]
+		// num 	 -	n√∫mero a obtener factorial [int]
 		// i	 -	contador [int]
-		// result-	resultado (num!) [long] para almacenar n˙meros grandes
+		// result-	resultado (num!) [long] para almacenar n√∫meros grandes
 		int num, i;
 		long result;
 		
-		// Pedir que n˙mero se desea calcular el factorial
-		Console.WriteLine("Introduce un n˙mero: ");
+		// Pedir que n√∫mero se desea calcular el factorial
+		Console.WriteLine("Introduce un n√∫mero: ");
 		num = Convert.ToInt32(Console.ReadLine());
 		
 		// Cuando se va a realizar multiplicaciones sucesivas, se inicia 
-		// una variable donde guardar el resultado (acumulador) a 1 (1 x cualquier n˙mero, da el mismo n˙mero)
-		// Luego el contador ir· de 1 hasta el n˙mero a calcular
+		// una variable donde guardar el resultado (acumulador) a 1 (1 x cualquier n√∫mero, da el mismo n√∫mero)
+		// A esto se le suele llamar neutro multiplicativo
+		// Luego el contador ir√° de 1 hasta el n√∫mero a calcular
 		// y se acumulan las multiplicaciones
+		// La instrucci√≥n for, ingresa y toma la primera parte
+		// antes del ;, luego revisa si la condici√≥n es verdadera
+		// y si lo es, ejecuta el cuerpo del for, en caso que este
+		// no contenga nada, o al finalizar todas las instrucciones
+		// ejecuta las operaciones que se encuentran tras la condici√≥n
+		// Repitiendo si la condici√≥n es verdadera
+		// Colocar el resultado result en 1, permite obtener
+		// la definici√≥n de 0!
 		for(i = 1, result = 1; i <= num; result *= i, i++);
-		Console.WriteLine("El factorial de {0} es {1}", num, result);		
-		
+		Console.WriteLine("El factorial de {0} es {1}", num, result);
 	}
 }
