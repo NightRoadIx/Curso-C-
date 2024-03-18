@@ -17,82 +17,113 @@ función.
 using System;
 
 /// <summary>
-/// Representa a un estudiante con atributos como nombre, número de boleta, edad, etc.
+/// Clase que representa a una persona con nombre, apellido paterno, apellido materno y edad.
 /// </summary>
-public class Alumno 
+public class Persona
 {
-    // ATRIBUTOS
-    private string nombre;
-    private string appPaterno;
-    private string appMaterno;
-    private string numBoleta;
-    private int edad;
-    private string correoElectronico;
-
-    // MÉTODOS
+    /* 
+     * Lo siguiente se conoce como getters y setters
+     * ya que, dada la característica de encapsulación 
+     * de la POO, los atributos no pueden ser leídos
+     * ni modificados fuera de la clase, entonces, hay que
+     * generar métodos que ingresen de manera indirecta
+     * getter - obtiene la información del atributi
+     * setter - coloca la información al atributo
+     */
+    /// <summary>
+    /// Nombre de la persona.
+    /// </summary>
+    public string Nombre { get; set; }
 
     /// <summary>
-    /// Constructor por defecto. Inicializa los atributos con valores predeterminados.
+    /// Apellido paterno de la persona.
     /// </summary>
-    public Alumno()
-    {
-        this.nombre = "";
-        this.appPaterno = "";
-        this.appMaterno = "";
-        this.numBoleta = "";
-        this.edad = 18;
-        this.correoElectronico = "usuario@correo.com";
-    }
-    
+    public string ApPaterno { get; set; }
+
     /// <summary>
-    /// Constructor que permite inicializar los atributos con valores específicos.
+    /// Apellido materno de la persona.
     /// </summary>
-    /// <param name="namen">Nombre del alumno.</param>
-    /// <param name="pat">Apellido paterno del alumno.</param>
-    /// <param name="mat">Apellido materno del alumno.</param>
-    /// <param name="bol">Número de boleta del alumno.</param>
-    /// <param name="ega">Edad del alumno.</param>
-    /// <param name="mail">Correo electrónico del alumno.</param>
-    public Alumno(string namen, string pat, string mat, string bol, int ega, string mail)
+    public string ApMaterno { get; set; }
+
+    /// <summary>
+    /// Edad de la persona.
+    /// </summary>
+    public int Edad { get; set; }
+
+    /// <summary>
+    /// Constructor de la clase Persona.
+    /// </summary>
+    /// <param name="nombre">Nombre de la persona.</param>
+    /// <param name="apPaterno">Apellido paterno de la persona.</param>
+    /// <param name="apMaterno">Apellido materno de la persona.</param>
+    /// <param name="edad">Edad de la persona.</param>
+    public Persona(string nombre, string apPaterno, string apMaterno, int edad)
     {
-        this.nombre = namen;
-        this.appPaterno = mat;
-        this.appMaterno = pat;
-        this.numBoleta = bol;
-        this.edad = ega;
-        this.correoElectronico = mail;
+        Nombre = nombre;
+        ApPaterno = apPaterno;
+        ApMaterno = apMaterno;
+        Edad = edad;
     }
-    
+}
+
+/// <summary>
+/// Clase que representa a un alumno, hereda de la clase Persona.
+/// </summary>
+public class Alumno : Persona
+{
+    /// <summary>
+    /// Número de boleta del alumno.
+    /// </summary>
+    public string NumBoleta { get; set; }
+
+    /// <summary>
+    /// Correo electrónico del alumno.
+    /// </summary>
+    public string CorreoElectronico { get; set; }
+
+    /// <summary>
+    /// Constructor de la clase Alumno.
+    /// </summary>
+    /// <param name="nombre">Nombre del alumno.</param>
+    /// <param name="apPaterno">Apellido paterno del alumno.</param>
+    /// <param name="apMaterno">Apellido materno del alumno.</param>
+    /// <param name="edad">Edad del alumno.</param>
+    /// <param name="numBoleta">Número de boleta del alumno.</param>
+    /// <param name="correoElectronico">Correo electrónico del alumno.</param>
+    public Alumno(string nombre, string apPaterno, string apMaterno, int edad, string numBoleta, string correoElectronico)
+        : base(nombre, apPaterno, apMaterno, edad)
+    {
+        NumBoleta = numBoleta;
+        CorreoElectronico = correoElectronico;
+    }
+
     /// <summary>
     /// Imprime el nombre completo del alumno en la consola.
     /// </summary>
     public void DarNombreCompleto()
     {
-        Console.WriteLine("Mi nombre es: " + this.nombre + " " + this.appPaterno + " " + this.appMaterno);
+        Console.WriteLine("Mi nombre es: " + Nombre + " " + ApPaterno + " " + ApMaterno);
     }
-} 
+}
 
 /// <summary>
 /// Clase principal que contiene la función Main como punto de entrada del programa.
 /// </summary>
 public class Program
 {
-    // Función principal
+    /// <summary>
+    /// Función principal del programa.
+    /// </summary>
     public static void Main()
     {
-        // Instanciar un objeto a partir de una clase
-        Alumno gus = new Alumno();
-        gus.DarNombreCompleto();
-        
-        Alumno alo = new Alumno("Antonie", "Gignac", "Ratatouille", "2015680185", 26, "meEncantaElPiton@gmail.com");
-        alo.DarNombreCompleto();
+        // Crear un objeto de tipo Alumno
+        Alumno alumno = new Alumno("Juan", "Pérez", "García", 20, "2021680001", "juan.perez@example.com");
 
-        // FIXME: Los atributos son de tipo "private" por tanto no se puede tener acceso fuera de la clase
-        // Esto genera un error de compilación, ya que los atributos son privados y no accesibles desde fuera de la clase.
-        gus.Nombre = "El gus";
-        gus.AppPaterno = "Vilchis";
-        gus.AppMaterno = "Bustos";
+        // Imprimir el nombre completo del alumno
+        alumno.DarNombreCompleto();
 
-        gus.DarNombreCompleto();
+        // Imprimir el número de boleta y correo electrónico del alumno
+        Console.WriteLine("Número de boleta: " + alumno.NumBoleta);
+        Console.WriteLine("Correo electrónico: " + alumno.CorreoElectronico);
     }
 }
