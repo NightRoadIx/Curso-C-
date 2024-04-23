@@ -2,6 +2,8 @@
 // Permite usar atributos y métodos del sistema
 using System;
 using System.Collections;
+using System.IO;	// Trabajar con entrada/salida
+using System.Globalization;
 
 namespace Hola
 {
@@ -21,24 +23,41 @@ namespace Hola
 			// Asignar el número
 			this.numero = numerul;
 		}
-		public void conversor()
+		public string conversor()
 		{
 			int i = 0;
 			// Generar una lista de tipo entero
 			List<int> d = new List<int>();
 			double tmp = this.numero;
-			// Recorrer el número
-			while(true) {
-				Console.Write("{0}\t{1:N2}\t", i, tmp);
-				d.Add(Convert.ToInt32(Math.Floor(tmp)));
-				tmp = (tmp - d[i]) * 2;
-				Console.WriteLine("{0}\t{1:N2}", d[i], tmp);
-				// TODO: Modificar para asegurar el número de
-				// bits
-				if((tmp == 0)||(i > 32)) break;
-				i++;
+			string tabla = "";
+			string linea = "";
+			DateTime fecha = new DateTime();
+			// Generar un manejador de contexto para
+			// escribir en un archivo línea por línea
+			using (StreamWriter fs = new StreamWriter("islas4.txt"))
+			{
+				// Recorrer el número
+				while(true) {
+					// Obtener el tiempo en ese momento
+					fecha = DateTime.Now;
+					// Generar la primera parte de la fila
+					linea = fecha.ToString() + "\t" + i.ToString() + "\t" + tmp.ToString("N2") + "\t";
+					d.Add(Convert.ToInt32(Math.Floor(tmp)));
+					tmp = (tmp - d[i]) * 2;
+					// Lo que continua con la fila
+					linea += d[i].ToString() + "\t" + tmp.ToString("N2");
+					// Se va creando la tabla
+					tabla += linea + "\n";
+					// Escribir la línea en el archivo
+					fs.WriteLine(linea);
+					// TODO: Modificar para asegurar el número de
+					// bits
+					if((tmp == 0)||(i > 32)) break;
+					i++;
+				}
 			}
 			Console.WriteLine(d[0]);
+			return tabla;
 		}
 	}
 
@@ -51,8 +70,13 @@ namespace Hola
 			// TODO: Permitir que el usuario ingrese
 			// un valor de punto flotante válido
 			// antes de generar el objeto
-			Flotador pwise = new Flotador(3.75);
-			pwise.conversor();
+			Flotador pwise = new Flotador(0.3);
+			string tabla = pwise.conversor();
+			//File.WriteAllText("islas2.txt", tabla);
+			Console.Write(tabla);
+
+			//string islas = "Ya me quiero dar de baja de la bida\nHola a todos!";
+			//File.WriteAllText("reversa.txt", islas);
 		}
 	}
 }
