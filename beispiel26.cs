@@ -15,6 +15,7 @@ namespace programa
 			 * */ 
 			// Crear una lista utilizando la clase List
 			// Se observa que se coloca entre <> el tipo de datos que tendrá la lista
+			// generando una coleección genérica
 			List<int> nuevaLista = new List<int>();
 			// Esto genera una lista vacía
 			
