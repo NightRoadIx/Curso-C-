@@ -1,0 +1,31 @@
+﻿Número,Español,Portugués,Catalán,Francés,Italiano,Rumano,Inglés,Alemán,Neerlandés,Sueco,Danés,Noruego,Irlandés,Ruso,Turco
+0,cero,zero,zero,zéro,zero,zero,zero,zero,null,nul,null,null,nolla,ноль,sıfır
+1,uno,um,u,un,uno,unu,one,eins,een,ett,en,en,aon,один,bir
+2,dos,dois,dos,deux,due,doi,two,zwei,twee,två,to,to,dó,два,iki
+3,tres,três,tres,trois,tre,trei,three,drei,drie,tre,tre,tre,trí,три,üç
+4,cuatro,quatro,quatre,quatre,quattro,patru,four,vier,vier,fyra,fire,fire,ceathair,четыре,dört
+5,cinco,cinco,cinc,cinq,cinque,cinci,five,fünf,vijf,fem,fem,fem,cúig,пять,beş
+6,seis,seis,sis,six,sei,șase,six,sechs,zes,sex,seks,seks,sé,шесть,altı
+7,siete,sete,set,set,sette,șapte,seven,sieben,zeven,sju,syv,sju,seacht,семь,yedi
+8,ocho,oito,vuit,huit,otto,opt,eight,acht,acht,åtta,otte,åtte,ocht,восемь,sekiz
+9,nueve,nove,nou,nuef,nove,nouă,nine,neun,negen,nio,ni,ni,naoi,девять,dokuz
+10,diez,dez,deu,dix,dieci,zece,ten,zehn,tien,tio,ti,ti,deich,десять,on
+11,once,onze,onze,onze,undici,unsprezece,eleven,elf,elf,elva,elleve,elleve,aon déag,одиннадцать,on bir
+12,doce,doze,dotze,douze,dodici,doisprezece,twelve,zwölf,twaalf,tolv,tolv,tolv,dó dhéag,двенадцать,on iki
+13,trece,treze,tretze,treize,tredici,treisprezece,thirteen,dreizehn,dertien,treton,tretten,tretten,trí déag,тринадцать,on üç
+14,catorce,catorze,catorze,quatorze,quattordici,paisprezece,fourteen,vierzehn,veertien,fjorton,fjorten,fjorten,ceathair déag,четырнадцать,on dört
+15,quince,quinze,quinze,quinze,quindici,cincisprezece,fifteen,fünfzehn,vijftien,femton,femten,femten,cúig déag,пятнадцать,on beş
+16,dieciséis,dezasseis,setze,seize,sedici,șaisprezece,sixteen,sechzehn,zestien,sexton,sejsten,seisten,sé déag,шестнадцать,on altı
+17,diecisiete,dezassete,disset,dix-sept,diciassette,șaptesprezece,seventeen,siebzehn,zeventien,sjutton,sytten,søtten,seacht déag,семнадцать,on yedi
+18,dieciocho,dezoito,divuit,dix-huit,diciotto,optsprezece,eighteen,achtzehn,achttien,arton,atten,atten,ocht déag,восемнадцать,on sekiz
+19,diecinueve,dezannove,dinou,dix-neuf,diciannove,nouăsprezece,nineteen,neunzehn,negentien,nitton,nitten,nitten,naoi déag,девятнадцать,on dokuz
+20,veinte,vinte,vint,vingt,venti,douăzeci,twenty,zwanzig,twintig,tjugo,tyve,tyve,fichi,двадцать,yirmi
+30,treinta,trinta,trent,trent,trenta,treizeci,thirty,dreißig,dertig,trettio,tredive,tredive,tríocha,тридцать,otuz
+40,cuarenta,quarenta,quaranta,quarante,quaranta,patruzeci,forty,vierzig,veertig,fyrtio,fyrre,førti,daichead,сорок,kırk
+50,cincuenta,cinquenta,cinquanta,cinquante,cinquanta,cincizeci,fifty,fünfzig,vijftig,femtio,halvtreds,femti,caoga,пятьдесят,elli
+60,sesenta,sessenta,seixanta,soixante,sessanta,șaizeci,sixty,sechzig,zestig,sextio, tres,seksti,seasca,шестьдесят,altmış
+70,setenta,setenta,setanta,soixante-dix,settanta,șaptezeci,seventy,siebzig,zeventig,sjuttio,halvfjerds,søtti,seachtó,семьдесят,yetmiş
+80,ochenta,oitenta,vuitanta,quatre-vingts,ottanta,optzeci,eighty,achtzig,tachtig,åttio,firs,åtti,ochtó,восемьдесят,seksan
+90,noventa,noventa,noranta,quatre-vingt-dix,novanta,nouăzeci,ninety,neunzig,negentig,nittio,halvfems,nitti,nócha,девяносто,doksan
+100,cien,cem,cent,cents,cento,o sută,hundred,hundert,honderd,hundra,de hundrede,hundre,céad,сто,yüz
+1000,mil,mil,mil,mille,mille,o mie,thousand,tausend,duizend,tusen,tusind,tusen,míle,тысяча,bin
