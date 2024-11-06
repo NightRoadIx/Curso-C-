@@ -64,23 +64,26 @@ namespace Program
             // Generar el objeto sw de la clase StreamWriter
             // para escribir archivos
             StreamWriter sw = null;
+            // Generar el objeto para crear números aleatorios
+            Random rnd = new Random();
+            double angulo = 0.0;
             try
             {
                 // Intentar abrir o crear el archivo CSV para guardar los resultados.
                 // Si esta instrucción genera un error, se salta al bloque catch
-                sw = new StreamWriter("camino_borracho.csv");
+                sw = new StreamWriter("camino_borracho.nahomi");
 
                 // Escribir encabezados en el archivo CSV.
                 sw.WriteLine("i,x,y");
 
-                Console.WriteLine(" i     x       y");
-                Console.WriteLine("---------------------");
+                Console.WriteLine(" i     x       y      a");
+                Console.WriteLine("------------------------------");
 
                 // Realizar la caminata aleatoria
                 for (int i = 0; i <= n; i++)
                 {
                     // Mostrar el paso actual en pantalla.
-                    Console.WriteLine($"{i,2}  {x,6:F3}  {y,6:F3}");
+                    Console.WriteLine($"{i,2}  {x,6:F3}  {y,6:F3}  {convertirAGrados(angulo),6:F2}");
 
                     // Guardar el paso actual en el archivo CSV.
                     sw.WriteLine($"{i},{x:F3},{y:F3}");
@@ -88,13 +91,13 @@ namespace Program
                     // Si no estamos en el último paso, generar el siguiente.
                     if (i < n)
                     {
-                        double angulo = GenerarAnguloAleatorio();
+                        angulo = rnd.NextDouble() * 2 * Math.PI; // Ángulo en [0, 2π]
                         x += L * Math.Cos(angulo);
                         y += L * Math.Sin(angulo);
                     }
                 }
 
-                Console.WriteLine("Los resultados han sido guardados en 'camino_borracho.csv'");
+                Console.WriteLine("Los resultados han sido guardados en 'camino_borracho.nahomi'");
             }
             catch (IOException e)
             {
@@ -114,13 +117,13 @@ namespace Program
         }
 
         /// <summary>
-        /// Genera un ángulo aleatorio en radianes para determinar la dirección del siguiente paso.
+        /// Convertir de radianes a grados
         /// </summary>
-        /// <returns>Ángulo aleatorio en radianes en el rango [0, 2π].</returns>
-        static double GenerarAnguloAleatorio()
+        /// <param name="angulo">Ángulo en radianes a convertir</param>
+        /// <returns>ángulo convertido en grados</returns>
+        static double convertirAGrados(double angulo)
         {
-            Random rnd = new Random();
-            return rnd.NextDouble() * 2 * Math.PI; // Ángulo en [0, 2π]
+            return (angulo * 180) / Math.PI;
         }
     }
 }
