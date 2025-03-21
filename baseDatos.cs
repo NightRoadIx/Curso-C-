@@ -1,13 +1,16 @@
 using System;
 // SQL librería
 using Microsoft.Data.Sqlite;
+using SQLitePCL;
 
 namespace Erencia
 {
     class Programe
     {
-        public static async void Main(string[] args)
+        public static void Main(string[] args)
         {
+            Batteries.Init();
+
             // Ruta del archivo que contendrá a la BD
             string conexion = "Data Source=miBD.db";
             // Usar una manejador de contexto
@@ -30,11 +33,13 @@ namespace Erencia
                          );
                      ";
                     // Ejecutar la consulta
-                    //tablaCmd.ExecuteNonQuery();
+                    tablaCmd.ExecuteNonQuery();
+
+                    Console.WriteLine("La tabla se ha creado correctamente.");
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e);
+                    Console.WriteLine("Héctor: " + e.Message);
                 }
             }
 
