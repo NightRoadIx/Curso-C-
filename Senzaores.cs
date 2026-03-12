@@ -1,22 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 
 // Programación orientada a objetos (POO)
 // 1. Abstracción
+/*
 public class Sensor
 {
     // ATRIBUTOS
-    // Como describimos el objeto (variables)
-    private string _tipo;
-    private double _lectura;
-
-    // 2. Encapsulación
-    // Atributos, SOLAMENTE se pueden modificar dentro de la
-    // clase, por segurida' para evitar que se cambien valores
-    public string Tipo
-    {
-        // Lectura, es abierto
+    // Como describimos el objeto
         get => _tipo;
         // Escritura
         private set
@@ -90,6 +83,7 @@ public class Sensor
         };
     }    
 
+    // 3. Sobrecarga de funciones, polimorfismo
     // Representación del sensor
     // Sobrecarga de la función ToString() que todo objeto
     // posee en la POO
@@ -100,13 +94,103 @@ public class Sensor
     }
 
 }
+*/
+
+// 3. Herencia 
+// Para reusar las cositas de las clases
+// y hacer las clases más mejores
+public abstract class Sensor
+{
+    public string Tipo {get; }
+    public double Lectura {get; protected set; }
+    public DateTime Timestamp {get; protected set; }
+
+    // Construptor
+    public Sensor(string tipo, double lecturaInicial)
+    {
+        if(string.IsNullOrWhiteSpace(tipo))
+            throw new ArgumentException("Tipo inválido");
+        
+        Tipo = tipo;
+        Actualizar(lecturaInicial);
+    }
+
+    public void Actualizar(double nuevaLectura)
+    {
+        Validar(nuevaLectura);
+        Lectura = nuevaLectura;
+        Timestamp = DateTime.Now;
+    }
+
+    // protected, método que solamente funciona en herencia
+    // abstract, tipo abstracto, indica que las clases hijas
+    // DEBEN implementar este método a h...o
+    protected abstract void Validar(double value);
+    public abstract bool EsCritico();
+
+    public override string ToString()
+    {
+        string estado = EsCritico() ? "Crítico" : "OK";
+        return $"{Tipo} | {Lectura:F2} | {Timestamp:HH:mm:ss} | {estado}";
+    }
+}
+
+/* CLASES HIJAS */
+//Aquí se van colocando las clases hijas, que heredan de la clase padre Sensor
+// la herencia se coloca con :
+public class SensorMotor : Sensor
+{
+    // Aquí se declara el constructor de clase que hereda de la clase "base"
+    // el constructor (o sea Sensor)
+    public SensorMotor(double lecturaInicial) : base("Motor", lecturaInicial)
+    {
+    }
+
+    // El método Validar estaba como abstracto y en la clase hija cuando se
+    // declara se debe sobrecargar (override) para indicar que aquí se va a definir
+    // un comportamiento especial de este método para esta clase hija
+    protected override void Validar(double value)
+    {
+        if (value < 0 || value > 9000)
+            throw new ArgumentOutOfRangeException(nameof(value), "RPM fuera de rango.");
+    }
+
+    // Mismo proceso para el método EsCritico()
+    public override bool EsCritico()
+    {
+        return Lectura > 6500;
+    }
+
+    // Todos los demás métodos se heredan y se mantiene su comportamiento como en la clase padre
+}
+
+public class SensorTemperatura : Sensor
+{
+    public SensorTemperatura(double lecturaInicial) : base("Temperatura", lecturaInicial)
+    {
+    }
+
+    protected override void Validar(double value)
+    {
+        if (value < -40 || value > 150)
+            throw new ArgumentOutOfRangeException(nameof(value), "Temperatura fuera de rango.");
+    }
+
+    public override bool EsCritico()
+    {
+        return Lectura > 95;
+    }
+}
+
 
 class Progran
 {
     static void Main()
     {
-        Sensor s1 = new Sensor("Motor", 3200);
-        Sensor s2 = new Sensor("Temperatura", 88);
+        // Se observa que se puede instanciar el objeto como Sensor (clase padre)
+        // Usando el comportamiento de cada clase hija con su respectivo constructor
+        Sensor s1 = new SensorMotor(3200);
+        Sensor s2 = new SensorTemperatura(88);
 
         Console.WriteLine(s1);
         Console.WriteLine(s2);
