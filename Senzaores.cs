@@ -149,6 +149,7 @@ public class SensorMotor : Sensor
     // El método Validar estaba como abstracto y en la clase hija cuando se
     // declara se debe sobrecargar (override) para indicar que aquí se va a definir
     // un comportamiento especial de este método para esta clase hija
+    // 4. Sobrecarga de funciones o polimorfismo
     protected override void Validar(double value)
     {
         if (value < 0 || value > 9000)
@@ -183,6 +184,7 @@ public class SensorTemperatura : Sensor
 }
 
 
+
 class Progran
 {
     static void Main()
@@ -202,6 +204,26 @@ class Progran
 
         Console.WriteLine(s1);
         Console.WriteLine(s2);
+
+
+        Int32 laGrande = new Int32();
+        laGrande.ToString();
+
+        // Crear una lista de sensores
+        List<Sensor> sensores = new List<Sensor>
+        {
+            new SensorMotor(7000),
+            new SensorTemperatura(100),
+        } ;
+
+        // Se recorre para ver si los sensores en lista
+        // son críticos, aquí se puede ver el uso de
+        // polimorfismo, dado que se trata de una función
+        // con el mismo nombre, pero con cada objeto
+        // de diferente tipo tiene un comportamiento diferente
+        // una especie de "if"
+        foreach(var sensor in sensores)
+            Console.WriteLine(sensor.EsCritico());
 
     }
 }
