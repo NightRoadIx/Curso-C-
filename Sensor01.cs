@@ -16,7 +16,9 @@ namespace FiestaPDiddy01
             // Instanciando un objeto
             // Lo que hace es asignar un espacio en memoria
             // para dicho objeto, que tiene las variables y funciones
-            Sensor temperatura = new Sensor();
+            Sensor temperatura = new Sensor();  // Constructor básico
+
+            Sensor presion = new Sensor(67, "Sensor presión", "psi", 33.0);
         }
     }
 
@@ -24,15 +26,47 @@ namespace FiestaPDiddy01
     {
         // ATRIBUTOS
         // Variables que describen al objeto
-        // public: que puede ser visto/modificado en todo el código
-        public uint id;     // Identificador entero sin signo
+        // public:  que puede ser visto/modificado en todo el código
+        // private: privado, que solamente puede ser modificado en
+        //          la propia clase
+        private uint id;     // Identificador entero sin signo
         // tipoDato?, le indican que la variable es non-nullable
         // int valor = null;  le están indicando que es un valor nulo
         // char *cadena;
-        public string? nombre;
+        private string? nombre;
+        private string? unidad;
         // Arreglo en C#, guardar 5 datos
-        public double[] valorTemp = new double[5];
-        public double promedio, maximo;
+        private double[] lecturas;
+        private double promedio, maximo, minimo;
+        private double umbral;
+
+        // PROPIEDADES
+        // Nombrada a partir del atributo
+        // iniciando con mayúscula
+        // debe ser pública
+        // y ha de colocarse:
+        public uint Id
+        {
+            // si es de lectura
+            get
+            {
+                return id;
+            }
+            // si es de escritura
+            // set; // En este caso no puede modificarse
+        }
+
+        public string? Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+            set
+            {
+                nombre = value;
+            }
+        }
 
         // MÉTODOS
         // Funciones que describen que hace el objeto
@@ -40,7 +74,27 @@ namespace FiestaPDiddy01
         // Constructor
         public Sensor()
         {
-            Console.WriteLine("Objeto construido");
+            id = 666;
+            nombre = "Sensor genérico chino";
+            unidad = "ua";
+            lecturas = new double[0];
+            umbral = 0.0;
+            Console.WriteLine("Objeto genérico construido");
+        }
+
+        // Se usa el polimorfismo (no confundir con poliamor)
+        // que es que una función puede tener
+        // varias funcionalidades sin cambiar su nombre
+        // en este caso, la diferencia radica en que se usan diferentes
+        // parámetros, para distinguir entre cual constructor usar
+        public Sensor(uint id, string nombre, string unidad, double umbral)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.unidad = unidad;
+            this.umbral = umbral;
+            lecturas = new double[0];
+            Console.WriteLine($"Objeto {this.nombre} construido");
         }
 
         // TODO: Crear dos funciones o métodos
